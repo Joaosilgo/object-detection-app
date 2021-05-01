@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/object-detection-app/static/css/main.523f09c5.chunk.css",
-    "main.js": "/object-detection-app/static/js/main.b349c2ca.chunk.js",
-    "main.js.map": "/object-detection-app/static/js/main.b349c2ca.chunk.js.map",
+    "main.css": "/object-detection-app/static/css/main.bc8a787a.chunk.css",
+    "main.js": "/object-detection-app/static/js/main.744f6576.chunk.js",
+    "main.js.map": "/object-detection-app/static/js/main.744f6576.chunk.js.map",
     "runtime-main.js": "/object-detection-app/static/js/runtime-main.a23dc4a7.js",
     "runtime-main.js.map": "/object-detection-app/static/js/runtime-main.a23dc4a7.js.map",
-    "static/js/2.fc9f5d40.chunk.js": "/object-detection-app/static/js/2.fc9f5d40.chunk.js",
-    "static/js/2.fc9f5d40.chunk.js.map": "/object-detection-app/static/js/2.fc9f5d40.chunk.js.map",
+    "static/css/2.8d3f7698.chunk.css": "/object-detection-app/static/css/2.8d3f7698.chunk.css",
+    "static/js/2.a1acc0a4.chunk.js": "/object-detection-app/static/js/2.a1acc0a4.chunk.js",
+    "static/js/2.a1acc0a4.chunk.js.map": "/object-detection-app/static/js/2.a1acc0a4.chunk.js.map",
     "index.html": "/object-detection-app/index.html",
-    "precache-manifest.3aee0d77abb3e748c2a55a284b2adc6f.js": "/object-detection-app/precache-manifest.3aee0d77abb3e748c2a55a284b2adc6f.js",
+    "precache-manifest.80eb32e6d5271e71713e86d07232a119.js": "/object-detection-app/precache-manifest.80eb32e6d5271e71713e86d07232a119.js",
     "service-worker.js": "/object-detection-app/service-worker.js",
-    "static/css/main.523f09c5.chunk.css.map": "/object-detection-app/static/css/main.523f09c5.chunk.css.map",
-    "static/js/2.fc9f5d40.chunk.js.LICENSE.txt": "/object-detection-app/static/js/2.fc9f5d40.chunk.js.LICENSE.txt"
+    "static/css/2.8d3f7698.chunk.css.map": "/object-detection-app/static/css/2.8d3f7698.chunk.css.map",
+    "static/css/main.bc8a787a.chunk.css.map": "/object-detection-app/static/css/main.bc8a787a.chunk.css.map",
+    "static/js/2.a1acc0a4.chunk.js.LICENSE.txt": "/object-detection-app/static/js/2.a1acc0a4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a23dc4a7.js",
-    "static/js/2.fc9f5d40.chunk.js",
-    "static/css/main.523f09c5.chunk.css",
-    "static/js/main.b349c2ca.chunk.js"
+    "static/css/2.8d3f7698.chunk.css",
+    "static/js/2.a1acc0a4.chunk.js",
+    "static/css/main.bc8a787a.chunk.css",
+    "static/js/main.744f6576.chunk.js"
   ]
 }

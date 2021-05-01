@@ -106,10 +106,35 @@ import * as cocossd from "@tensorflow-models/coco-ssd";
 import Webcam from "react-webcam";
 import "./App.css";
 import { drawRect } from "./utilities";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Button from 'react-bootstrap/Button';
+
+
+const FACING_MODE_USER = "user";
+const FACING_MODE_ENVIRONMENT = "environment";
+
+const videoConstraints = {
+  //width: 640,
+  //height: 480,
+  facingMode: FACING_MODE_USER
+};
+
 
 function App() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null);
+
+  const [facingMode, setFacingMode] = React.useState(FACING_MODE_USER);
+
+  const handleClick = React.useCallback(() => {
+    setFacingMode(
+      prevState =>
+        prevState === FACING_MODE_USER
+          ? FACING_MODE_ENVIRONMENT
+          : FACING_MODE_USER
+    );
+  }, []);
 
   // Main function
   const runCoco = async () => {
@@ -146,31 +171,47 @@ function App() {
 
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
-      drawRect(obj, ctx); 
+      drawRect(obj, ctx);
     }
   };
 
-  useEffect(()=>{runCoco()},[]);
+  useEffect(() => { runCoco() }, []);
+
+
+
+
+
+
 
   return (
     <div className="App">
-      <header className="App-header">
-        <Webcam
-          ref={webcamRef}
-          muted={true} 
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 9,
-            width: 640,
-            height: 480,
-          }}
-        />
 
+      <Button variant="light" onClick={handleClick}>Switch camera</Button>
+      <header className="App-header">
+
+    
+          <Webcam
+            ref={webcamRef}
+            muted={true}
+            style={{
+              position: "absolute",
+              marginLeft: "auto",
+              marginRight: "auto",
+              left: 0,
+              right: 0,
+              textAlign: "center",
+              zindex: 9,
+              //height: "100%",
+              // width: "100%"
+               width: 640,
+               height: 480,
+            }}
+            videoConstraints={{
+              ...videoConstraints,
+              facingMode
+            }}
+          />
+        
         <canvas
           ref={canvasRef}
           style={{
@@ -181,10 +222,12 @@ function App() {
             right: 0,
             textAlign: "center",
             zindex: 8,
-            width: 640,
-            height: 480,
+
+             width: 640,
+             height: 480,
           }}
         />
+ 
       </header>
     </div>
   );
